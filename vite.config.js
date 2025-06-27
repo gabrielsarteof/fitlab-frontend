@@ -11,7 +11,7 @@ export default defineConfig(({ command }) => {
   return {
     publicDir: 'assets',
     plugins: [react()],
-
+    base: "/fitlab-frontend",
     resolve: {
       alias: {
         '@': path.resolve(__dirname, './src'),

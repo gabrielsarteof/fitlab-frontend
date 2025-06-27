@@ -20,7 +20,7 @@ import PageNotFound from '@pages/PageNotFound';
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/fitlab-frontend">
       <Routes>
         <Route path="/login" element={<LoginPage />} />
         <Route
