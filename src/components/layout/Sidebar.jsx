@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '@hooks/useAuth';
-import logo from '@assets/fitlab-logo-icon.svg';
+import logo_icon from '@assets/fitlab-logo-icon.svg';
 
 export default function Sidebar({ collapsed, onToggle, isMobile }) {
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -73,7 +73,7 @@ export default function Sidebar({ collapsed, onToggle, isMobile }) {
         <nav className="navbar navbar-expand-lg navbar-dark bg-primary mobile-topbar">
           <div className="container-fluid px-3">
             <div className="navbar-brand">
-              <img src={logo} alt="FitLab Logo" width={40} />
+              <img src={logo_icon} alt="FitLab Logo" width={40} />
             </div>
 
             <button
@@ -172,7 +172,7 @@ export default function Sidebar({ collapsed, onToggle, isMobile }) {
         <div className="sidebar-content rounded-3 px-1 py-4">
           {/* Logo */}
           <div className="sidebar-logo">
-            <img src={logo} alt="FitLab Logo" width={screenSize === 'tablet' && collapsed ? 35 : 75} />
+            <img src={logo_icon} alt="FitLab Logo" width={screenSize === 'tablet' && collapsed ? 35 : 75} />
           </div>
 
           {/* Toggle Button for Desktop only */}

@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import { toast, Toaster } from 'react-hot-toast';
 import { useNavigate, Link } from 'react-router-dom';
 import api from '../../api';
+import logo from '@assets/fitlab-logo-primary.svg';
+import logo_alternativa from '@assets/fitlab-logo-alt-tertiary.svg';
 
 export default function LoginPage() {
   const [email, setEmail] = useState('');
@@ -39,7 +41,7 @@ export default function LoginPage() {
             <div className="w-50 d-flex flex-column bg-white justify-content-center mx-auto py-5">
               <img
                 className="me-auto mb-2"
-                src={`${import.meta.env.BASE_URL}fitlab-logo-primary.svg`}
+                src={logo}
                 alt="Logo"
                 height={25}
               />
@@ -108,7 +110,7 @@ export default function LoginPage() {
           <div className="w-100 d-flex flex-column justify-content-center align-items-center bg-primary text-white h-100">
             <img
               className="h-75"
-              src={`${import.meta.env.BASE_URL}fitlab-logo-alt-tertiary.svg`}
+              src={logo_alternativa}
               alt="Logo"
             />
           </div>

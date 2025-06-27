@@ -1,3 +1,5 @@
+import logo from '@assets/fitlab-logo-primary.svg';
+
 export default function HeaderBanner({ nome }) {
   return (
     <section
@@ -9,7 +11,7 @@ export default function HeaderBanner({ nome }) {
         <div className="text-muted mb-1">Acompanhe sua academia.</div>
       </div>
       <img
-        src={`${import.meta.env.BASE_URL}fitlab-logo-primary.svg`}
+        src={logo}
         alt="avatar"
         className="avatar-absolute img-fluid"
         style={{
