@@ -1,24 +1,43 @@
-<!-- 404.html -->
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <script>
-      (function () {
-        // Se já vier com hash ou search, não faz nada
-        if (window.location.hash || window.location.search) return;
-        const repoName = 'fitlab-frontend';
-        const path = window.location.pathname.split('/')
-          // remove a primeira parte vazia e o nome do repositório
-          .slice(2)
-          .join('/');
-        // redireciona para index.html#/<rota>
-        window.location.replace(
-          `${window.location.origin}/${repoName}/index.html#/${path}`
-        );
-      })();
+    <link rel="icon" type="image/svg+xml" href="/fitlab-frontend/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FitLab</title>
+    
+    <!-- Script para redirecionar para index.html mantendo a rota -->
+    <script type="text/javascript">
+      // Single Page Apps for GitHub Pages
+      // Este script pega a URL atual e a converte para uma query string
+      // que será processada pelo index.html
+      
+      var pathSegmentsToKeep = 1; // Número de segmentos do path que representam o repositório
+      
+      var l = window.location;
+      l.replace(
+        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+        l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
+        l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
+        (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+        l.hash
+      );
     </script>
-    <title>Redirecionando…</title>
   </head>
-  <body></body>
+  <body>
+    <!-- Conteúdo opcional enquanto carrega -->
+    <div id="loading" style="
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      color: #333;
+    ">
+      <div style="text-align: center;">
+        <h2>Redirecionando...</h2>
+        <p>Você está sendo redirecionado para a página correta.</p>
+      </div>
+    </div>
+  </body>
 </html>
