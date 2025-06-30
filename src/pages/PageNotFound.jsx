@@ -1,4 +1,5 @@
 // src/pages/PageNotFound.jsx
+import toto from '@static/img/404.png';
 
 export default function PageNotFound() {
   return (
@@ -16,7 +17,7 @@ export default function PageNotFound() {
           expirado, incorreto ou a página pode ter sido removida.
         </p>
         <img
-          src="src/static/img/404.png"
+          src={toto}
           alt="Totó comendo uma página."
           height="300px"
         />

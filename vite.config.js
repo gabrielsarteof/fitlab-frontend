@@ -9,9 +9,8 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 export default defineConfig(({ command }) => {
 
   return {
-    publicDir: 'assets',
     plugins: [react()],
-    base: "/fitlab-frontend",
+    base: "/fitlab-frontend/",
     resolve: {
       alias: {
         '@': path.resolve(__dirname, './src'),
@@ -23,6 +22,7 @@ export default defineConfig(({ command }) => {
         '@services': path.resolve(__dirname, './src/services'),
         '@layout': path.resolve(__dirname, './src/layout'),
         '@styles': path.resolve(__dirname, './src/styles'),
+        '@static': path.resolve(__dirname, './src/static'),
       },
     },
 
