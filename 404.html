@@ -1,0 +1,24 @@
+<!-- 404.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      (function () {
+        // Se já vier com hash ou search, não faz nada
+        if (window.location.hash || window.location.search) return;
+        const repoName = 'fitlab-frontend';
+        const path = window.location.pathname.split('/')
+          // remove a primeira parte vazia e o nome do repositório
+          .slice(2)
+          .join('/');
+        // redireciona para index.html#/<rota>
+        window.location.replace(
+          `${window.location.origin}/${repoName}/index.html#/${path}`
+        );
+      })();
+    </script>
+    <title>Redirecionando…</title>
+  </head>
+  <body></body>
+</html>
